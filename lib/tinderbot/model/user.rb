@@ -10,7 +10,7 @@ module Tinderbot
         user.name = tinder_json['name']
         user.bio = tinder_json['bio']
         user.birth_date = Date.parse tinder_json['birth_date']
-        user.gender = tinder_json['gender'] == 0 ? :male : :female
+        user.gender = :female
         user.photo_urls = tinder_json['photos'].map { |t| t['url'] }
         user
       end
